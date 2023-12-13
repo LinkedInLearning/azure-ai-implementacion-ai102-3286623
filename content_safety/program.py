@@ -13,7 +13,7 @@ def analyze_text():
     client = ContentSafetyClient(endpoint, AzureKeyCredential(key))
 
     # Construct a request
-    request = AnalyzeTextOptions(text="YOUR PROMPT")
+    request = AnalyzeTextOptions(text="Contenido ofensivo")
 
     # Analyze text
     try:
