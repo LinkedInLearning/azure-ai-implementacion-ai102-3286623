@@ -1,0 +1,38 @@
+﻿<Window x:Class="image_analysis.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:image_analysis"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Button HorizontalAlignment="Right"
+            Content="Cargar"
+            Click="LoadImage_Click" />
+
+            <Button HorizontalAlignment="Right"
+            Content="Analizar"
+            Click="AnalyzeImage_Click" />
+
+            <TextBox x:Name="ImageUrl" 
+                     Text="https://learn.microsoft.com/azure/ai-services/computer-vision/media/quickstarts/presentation.png" 
+                     VerticalContentAlignment="Center" 
+                     MinWidth="100"
+                     MaxWidth="600" />
+            
+            <TextBlock x:Name="ContentText" Margin="10" />
+        </StackPanel>
+
+        <Canvas Grid.Row="1">
+            <Image x:Name="TheImage" Stretch="None"  />
+            <Canvas x:Name="MyCanvas" />
+        </Canvas>
+    </Grid>
+</Window>

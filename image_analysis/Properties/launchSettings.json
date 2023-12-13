@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "image_analysis": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "AZURE_VISION_KEY": "16af1b888e754516a8fa5d7e7ed16094",
+        "AZURE_VISION_ENDPOINT": "https://ai-102-vision.cognitiveservices.azure.com/"
+      }
+    }
+  }
+}
