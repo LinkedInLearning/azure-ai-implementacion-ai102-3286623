@@ -1,0 +1,15 @@
+services:
+  azure-form-recognizer-layout:
+    container_name: azure-form-recognizer-layout
+    image: mcr.microsoft.com/azure-cognitive-services/form-recognizer/layout-4.0
+    environment:
+      - EULA=accept
+      - billing=${BILLING}
+      - apiKey=${APIKEY}
+    ports:
+      - "5000:5000"
+    networks:
+      - ocrvnet
+networks:
+  ocrvnet:
+    driver: bridge
